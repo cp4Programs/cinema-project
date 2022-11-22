@@ -15,6 +15,10 @@
     background-color: var(--white);
 }
 
+.header-dark {
+    background-color: var(--black);
+}
+
 .logo {
     color: var(--red);
     font-size: 2rem;
@@ -47,6 +51,7 @@
     align-items: center;
     border: solid 1px var(--grey);
 }
+
 
 .theme-icon {
     font-size: 36px;
