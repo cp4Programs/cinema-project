@@ -5,8 +5,8 @@ export default function ThemeContextProvider(props) {
     const [darkMode, setDarkMode] = useState(true)
 
     useEffect(() => {
-        const theme = localStorage.getItem('darkMode'),
-            setDarkMode = (JSON.parse(theme))
+        const theme = localStorage.getItem('darkMode')
+        setDarkMode(JSON.parse(theme))
     }, [])
 
     return (

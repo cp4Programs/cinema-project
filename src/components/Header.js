@@ -24,7 +24,7 @@ function Header() {
                     {
                         darkMode ?
                             <div className="theme-buttons"> <MdOutlineLightMode onClick={handleTheme} className="theme-icon" /><MdOutlineDarkMode className="theme-icon theme-icon-active" /></div>
-                            : <div classNames="theme-buttons"><MdOutlineLightMode className="theme-icon theme-icon-active" /><MdOutlineDarkMode onClick={handleTheme} className="theme-icon" /></div>
+                            : <div className="theme-buttons"><MdOutlineLightMode className="theme-icon theme-icon-active" /><MdOutlineDarkMode onClick={handleTheme} className="theme-icon" /></div>
                     }
                 </div>
                 <div>
