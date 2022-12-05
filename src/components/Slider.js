@@ -5,7 +5,7 @@ import '../styles/slider.css'
 
 function Slider({ apiKey, baseUrl }) {
     const [upcomingMovies, setUpcomingMovies] = useState([])
-    const imageBaseUrl = "https://image.tmdb.org/t/p/w500"
+    const imageBaseUrl = process.env.REACT_APP_IMAGE_BASE_URL
     const [index, setIndex] = useState(0)
 
 
