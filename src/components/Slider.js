@@ -41,8 +41,15 @@ function Slider({ apiKey, baseUrl }) {
 
     return (
         <div style={sliderStyle}>
+            <div className="slider-overlay"></div>
             <MdKeyboardArrowLeft onClick={handleLeft} className="left-arrow" />
             <MdKeyboardArrowRight onClick={handleRight} className="right-arrow" />
+            <div className="slider-info">
+                <h1>{upcomingMovies[index]?.title}</h1>
+                <p className="slider-description">{upcomingMovies[index]?.overview.slice(0, 130)}...</p>
+
+                <p className="slider-description">Release Date: {upcomingMovies[index]?.release_date}</p>
+            </div>
 
         </div>
     )
