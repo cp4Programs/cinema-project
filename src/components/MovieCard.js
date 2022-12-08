@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Rating from './Rating'
 
 function MovieCard({ data, cardStyle, imageUrl, height, radius }) {
     const imageBaseUrl = process.env.REACT_APP_IMAGE_BASE_URL
+    const [movieRating, setMovieRating] = useState(data?.vote_average / 2)
 
     const imageStyle = {
         backgroundImage: `url("${imageBaseUrl}/${imageUrl}")`,
@@ -17,7 +19,7 @@ function MovieCard({ data, cardStyle, imageUrl, height, radius }) {
         <div className={cardStyle}>
             <div style={imageStyle}>
                 <div className="movie-info-top">
-                    rating
+                    <Rating movieRating={movieRating} />
                 </div>
                 <div className="movie-info-bottom">
                     <p>{data?.title}</p>
