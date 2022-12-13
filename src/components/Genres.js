@@ -12,7 +12,6 @@ function Genres({ apiKey, baseUrl, movieGenres }) {
 
             })
             .catch(err => console.log(err))
-        console.log(movieGenres)
     }, [movieGenres])
 
     return (
@@ -22,7 +21,7 @@ function Genres({ apiKey, baseUrl, movieGenres }) {
                 movieGenres?.map((id, index) => {
                     for (let i = 0; i < allGenres.length; i++) {
                         if (id === allGenres[i].id) {
-                            return <p> {index === movieGenres.length - 1 ? `${allGenres[i].name}` : `${allGenres[i].name},`} </p>
+                            return <p key={index}> {index === movieGenres.length - 1 ? `${allGenres[i].name}` : `${allGenres[i].name},`} </p>
                         }
                     }
                 })

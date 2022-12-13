@@ -14,7 +14,7 @@ function Header() {
     }
 
     return (
-        <div className={darkMode ? "header-container" : "header-container header-light"}>
+        <div className={darkMode ? "header-container" : "header-container header-light"} >
             <Link className="logo" to="/">CineTrail</Link>
             <div className="search-container">
                 <input className="search-input" placeholder="Search Movies" />
@@ -32,7 +32,7 @@ function Header() {
                 </div>
 
             </div>
-        </div>
+        </ div>
 
     );
 }
