@@ -13,14 +13,13 @@ function Homepage({ apiKey, baseUrl }) {
     const [topRatedMovies, setTopRatedMovies] = useState([])
     const pageNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const [page, setPage] = useState(1)
-    // const handlePage = (number) => {
-    //     setPage(number)
-    // }
+
+
 
     useEffect(() => {
         axios.get(`${baseUrl}/movie/popular?api_key=${apiKey}&page=${page}`)
             .then(res => {
-                console.log(res.data.results)
+
                 setPopularMovies(res.data.results)
             })
             .catch(err => console.log(err))
@@ -30,8 +29,7 @@ function Homepage({ apiKey, baseUrl }) {
     useEffect(() => {
         axios.get(`${baseUrl}/movie/top_rated?api_key=${apiKey}&page=1`)
             .then(res => {
-                console.log(res.data.results)(
-                    setTopRatedMovies(res.data.results.slice(0, 10)))
+                setTopRatedMovies(res.data.results.slice(0, 10))
             })
             .catch(err => console.log(err))
     }, [])

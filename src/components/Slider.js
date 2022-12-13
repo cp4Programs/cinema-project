@@ -18,7 +18,7 @@ function Slider({ apiKey, baseUrl }) {
     useEffect(() => {
         axios.get(`${baseUrl}/movie/upcoming?api_key=${apiKey}`)
             .then(res => {
-                console.log(res.data.results)
+
                 setUpcomingMovies(res.data.results)
                 setMovieRating(res.data.results[index]?.vote_average)
             })
